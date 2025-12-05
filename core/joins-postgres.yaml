@@ -575,7 +575,7 @@ Views:
       WHERE window_start > now() - interval $$1 hour$$
       GROUP BY subject_type, subject_id, name
       ORDER BY total_count DESC;
-  orders_revenue_daily:
+  revenue_daily:
     create: |-
       -- Daily revenue (orders) and counts; refunds reported separately
       CREATE OR REPLACE VIEW vw_revenue_daily AS
