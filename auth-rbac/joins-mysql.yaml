@@ -102,6 +102,7 @@ Views:
       LEFT JOIN active_roles ar ON ar.user_id = u.id
       LEFT JOIN role_perms rp   ON rp.user_id = u.id
       GROUP BY u.id;
+    RequiresTempTable: true
     Requires:
       - rbac_user_roles
       - rbac_role_permissions
